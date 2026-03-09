@@ -3,8 +3,6 @@ hello worlddddd
 
 ## subtitle1:
 
-This is a list.
-
 - first one
 - second one
 - [111](111)
