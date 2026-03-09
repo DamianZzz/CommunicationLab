@@ -1,0 +1,43 @@
+body{
+    margin:0;
+    background-color: khaki;
+
+}
+
+.mainWrapper{
+    background-color: rgb(202, 187, 187);
+    height: 4000px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#headerWrapper{
+    background-color: aqua;
+    
+}
+
+#headerWrapper h1{
+    text-align: center;
+}
+
+#bar1{
+    display:flex;
+}
+
+#bar1 a{
+    flex: 1;
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+    padding: 14px 0;
+    border: 2px solid hotpink;
+}
+
+#bar1 a:hover{
+    color: purple;
+}
+
+#content{
+    min-height: 500px;
+}

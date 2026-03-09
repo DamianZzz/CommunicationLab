@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: antiquewhite;
+}
+
+.topbar{
+    height: 64px;
+    display: flex;
+    align-items: stretch;
+    border-bottom: 2px solid black;
+}
+
+.topbarL,.topbarR{
+    display: flex;
+    background-color: blueviolet;
+}
+ 
+.topbarM{
+    flex: 1;
+    background-color: cadetblue;
+}
+
+.container{
+
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    outline: 3px blueviolet dotted;
+    align-items: center;
+}
+
+.item{
+    width: 33%;
+    padding: 10px;
+    box-sizing: border-box;
+}
