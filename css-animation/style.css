@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    background-color: antiquewhite;
+}
+
+.text{
+    width: 400px;
+    margin-left: 40px;
+}
+
+#lorem-paragraph{
+    
+    transform: rotate(2deg);
+    transition: background-color  2s linear, color 0.5s linear;
+}
+#lorem-paragraph:hover{
+    background-color: lightblue;
+    color: white;
+}
+
+#hello{
+    font-size: 30px;
+    color: red;
+   
+}
+#hello span{
+    transition: transform 1s ease-in-out;
+    display: inline-block;
+    transform: translate(0, 0);
+}
+
+#hello:hover span{
+    display: inline-block;
+    transform: translate(200px, -10px);
+}
+#hello:hover span:nth-child(1){
+     display: inline-block;
+    transform: translate(500px, 70px);
+}
+#hello:hover span:nth-child(2){
+     display: inline-block;
+    transform: translate(10px, -105px) rotate(190deg);
+}
+#hello:hover span:nth-child(3){
+     display: inline-block;
+
+    transform: translate(50px, 10px);
+}
+#hello:hover span:nth-child(4){
+     display: inline-block;
+    transform: translate(1000px, -150px);
+}
+
+@keyframes move{
+    from{
+        transform: skew(0deg, 0deg);
+    }
+    to{
+        transform: skew(20deg, 20deg);
+    }
+}
+
+img{
+    animation: move 0.1s infinite;
+}
+
+@keyframes move2{
+    0%{
+        transform: translate(0px, 0px);
+        color: black;
+        font-size: 12px;
+    }
+    10%{
+
+    }
+    12%{
+        transform: translate(4px,-25px);
+        color: steelblue;
+    }
+    40%{
+
+    }
+    50%{
+
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
