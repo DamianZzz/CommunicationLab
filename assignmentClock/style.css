@@ -57,20 +57,20 @@ body {
     transform: translate(-50%, -50%) scale(1.45);
 }
 
-.secondUnit.trail-1 {
+.secondUnit.trail1 {
     color: rgba(240, 220, 255, 0.42);
     opacity: 0.75;
     text-shadow: 0 0 10px rgba(123, 232, 255, 0.45);
     transform: translate(-50%, -50%) scale(1.15);
 }
 
-.secondUnit.trail-2 {
+.secondUnit.trail2 {
     color: rgba(220, 210, 255, 0.16);
     opacity: 0.42;
     transform: translate(-50%, -50%) scale(1.04);
 }
 
-.secondUnit.trail-3 {
+.secondUnit.trail3 {
     color: rgba(200, 230, 255, 0.08);
     opacity: 0.22;
 }

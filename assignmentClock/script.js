@@ -33,7 +33,7 @@ function updateSecondRing(second) {
     const units = document.querySelectorAll(".secondUnit");
 
     units.forEach(function(unit, index) {
-        unit.classList.remove("active", "trail-1", "trail-2", "trail-3");
+        unit.classList.remove("active", "trail1", "trail2", "trail3");
 
         const directDiff = Math.abs(index - second);
         const circularDiff = Math.min(directDiff, SECOND_TOTAL - directDiff);
@@ -41,11 +41,11 @@ function updateSecondRing(second) {
         if (circularDiff === 0) {
             unit.classList.add("active");
         } else if (circularDiff === 1) {
-            unit.classList.add("trail-1");
+            unit.classList.add("trail1");
         } else if (circularDiff === 2) {
-            unit.classList.add("trail-2");
+            unit.classList.add("trail2");
         } else if (circularDiff === 3) {
-            unit.classList.add("trail-3");
+            unit.classList.add("trail3");
         }
     });
 }
