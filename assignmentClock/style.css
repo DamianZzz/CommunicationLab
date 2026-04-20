@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: rgb(4, 4, 4);
+    overflow: hidden;
+    font-family: Georgia, serif;
+    color: #bff6ff;
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.clock-ring {
+    position: relative;
+    width: 760px;
+    height: 760px;
+}
+
+.secondRing,.minuteRing,.hourRing {
+    position: absolute;
+    inset: 0;
+}
+
+.secondUnit,.minuteUnit,.hourUnit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+    transition:
+        opacity 0.22s ease,
+        color 0.22s ease,
+        text-shadow 0.22s ease,
+        transform 0.22s ease,
+        filter 0.22s ease;
+}
+/* second */
+.secondUnit {
+    color: rgba(191, 246, 255, 0.05);
+    font-size: 16px;
+    letter-spacing: 0.08em;
+}
+
+.secondUnit.active {
+    color: #fff5ff;
+    opacity: 1;
+    text-shadow:
+        0 0 8px rgba(255, 220, 255, 0.95),
+        0 0 18px rgba(123, 232, 255, 0.95),
+        0 0 34px rgba(123, 232, 255, 0.65);
+    filter: blur(0);
+    transform: translate(-50%, -50%) scale(1.45);
+}
+
+.secondUnit.trail-1 {
+    color: rgba(240, 220, 255, 0.42);
+    opacity: 0.75;
+    text-shadow: 0 0 10px rgba(123, 232, 255, 0.45);
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+.secondUnit.trail-2 {
+    color: rgba(220, 210, 255, 0.16);
+    opacity: 0.42;
+    transform: translate(-50%, -50%) scale(1.04);
+}
+
+.secondUnit.trail-3 {
+    color: rgba(200, 230, 255, 0.08);
+    opacity: 0.22;
+}
+
+/* minute */
+.minuteUnit {
+    color: rgba(180, 255, 240, 0.035);
+    font-size: 14px;
+    letter-spacing: 0.06em;
+}
+
+.minuteUnit.past {
+    color: rgba(180, 255, 240, 0.16);
+    opacity: 0.65;
+    text-shadow: 0 0 8px rgba(120, 255, 230, 0.18);
+}
+
+.minuteUnit.current {
+    color: #eafffb;
+    opacity: 1;
+    text-shadow:
+        0 0 8px rgba(170, 255, 240, 0.9),
+        0 0 18px rgba(120, 255, 230, 0.75);
+    transform: translate(-50%, -50%) scale(1.28);
+}
+
+.minuteUnit.future {
+    color: rgba(180, 255, 240, 0.03);
+    opacity: 0.18;
+}
+
+/* hour */
+.hourUnit {
+    color: rgba(255, 235, 190, 0.22);
+    opacity: 0.55;
+    font-size: 24px;
+    letter-spacing: 0.08em;
+}
+
+.hourUnit.active-hour {
+    color: #fff7e8;
+    opacity: 1;
+    text-shadow:
+        0 0 10px rgba(255, 235, 190, 0.95),
+        0 0 22px rgba(255, 220, 150, 0.65);
+    transform: translate(-50%, -50%) scale(1.28);
+}
