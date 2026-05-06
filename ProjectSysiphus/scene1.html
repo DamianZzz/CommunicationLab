@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Sisyphus</title>
+  <link rel="stylesheet" href="scene1.css">
+  <script src="scene1.js" defer></script>
+</head>
+
+<body>
+  <div class="viewport">
+
+    <!-- Layer 3: distant background -->
+    <div id="farWorld" class="farWorld">
+      <img class="farHill farA" src="images/ai-bgHill.png" alt="">
+      <img class="farHill farB" src="images/ai-bgHill.png" alt="">
+    </div>
+
+    <div id="trackWorld" class="trackWorld">
+      <img class="trackStrip trackA" src="images/ai-path.png" alt="">
+      <img class="trackStrip trackB" src="images/ai-path.png" alt="">
+      <img class="trackStrip trackC" src="images/ai-path.png" alt="">
+    </div>
+
+    <div class="stage">
+      <img class="cover" src="images/cover.png" alt="">
+      <img id="stone" class="stoneImg" src="images/ai-stone.png" alt="stone">
+      <img id="figure" class="figureImg" src="images/ai-sisyphus.png" alt="figure">
+    </div>
+
+    <div class="text">
+      <p class="header">SCENE 01: STONE</p>
+      <p id="instruc">drag anywhere to push</p>
+      <p id="counter">distance: 0</p>
+    </div>
+
+    <a id="nextLink" class="nextLink" href="microbe.html">
+        perhaps I should look closer.
+    </a>
+
+    <audio id="bgm" loop>
+        <source src="audio/bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicBtn" class="musicBtn">🎵</button>
+
+  </div>
+</body>
+</html>

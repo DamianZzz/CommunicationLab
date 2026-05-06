@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  cursor: grab;
+  color: #111;
+  background-color: #d8b86f;
+  background-image: url("images/ai-paper.png");
+  background-size:auto;
+  background-position: center;
+}
+/* 
+body.dragging {
+  cursor: grabbing;
+} */
+
+.viewport {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.farWorld {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.farHill {
+  position: absolute;
+  width: 2000px;
+  height: 800px;
+  opacity: 0.8;
+}
+
+.farA {
+  left: 0px;
+  top: 45px;
+}
+
+.farB {
+  left: 1800px;
+  top: 45px;
+}
+
+/* moving path */
+.trackWorld {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.trackStrip {
+  position: absolute;
+  width: 1800px;
+  height: auto;
+  filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.12));
+}
+
+.trackA {
+  left: -100px;
+  top: 180px;
+}
+
+.trackB {
+  left: 1300px;
+  top: -324px;
+}
+
+.trackC {
+  left: 2700px;
+  top: -828px;
+}
+
+.floatingWord {
+  position: absolute;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #111;
+}
+
+/* fixed foreground */
+.stage {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.cover{
+  position: absolute;
+  left: 80px;
+  top: 145px;
+  width: 1500px;
+  height: 800px;
+  z-index: 1;
+  opacity: 1;
+  transform: rotate(8deg);
+  transform-origin: center center;
+
+}
+
+/* stone */
+.stoneImg {
+  position: absolute;
+  left: 810px;
+  top: 290px;
+  width: 180px;
+  height: auto;
+  transform-origin: center center;
+  transition: transform 0.08s linear;
+  filter: drop-shadow(-10px 14px 12px rgba(0, 0, 0, 0.28));
+  z-index: 4;
+}
+
+/* figure */
+.figureImg {
+  position: absolute;
+  left: 660px;
+  top: 330px;
+  width: 155px;
+  height: auto;
+  transition: transform 0.12s linear;
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.28));
+  z-index: 3;
+}
+
+body.dragging .figureImg {
+  transform: rotate(-4deg) translateX(8px);
+}
+
+/* UI */
+.text {
+  position: absolute;
+  left: 40px;
+  top: 34px;
+  z-index: 10;
+  font-family: "Courier New", monospace;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #111;
+}
+
+.text p {
+  margin: 10px 0;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.nextLink {
+  display: none;
+  position: absolute;
+  right: 44px;
+  bottom: 38px;
+  z-index: 10;
+  color: #111;
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: 2px solid #111;
+  padding: 16px 20px;
+  background: rgba(236, 211, 145, 0.88);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.nextLink:hover {
+  background: #111;
+  color: #e8c985;
+}
+
+.nextLink.show {
+  display: block;
+}
+
+
+
+.musicBtn {
+  position: fixed;
+  right: 18px;
+  top: 18px;
+  z-index: 9999;
+
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 999px;
+
+  background: rgba(20, 20, 20, 0.32);
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
+}
+
+.musicBtn:hover {
+  background: rgba(20, 20, 20, 0.6);
+  color: rgba(255, 255, 255, 1);
+  transform: scale(1.06);
+}
+
+.musicBtn.playing {
+  background: rgba(236, 211, 145, 0.78);
+  color: #111;
+}

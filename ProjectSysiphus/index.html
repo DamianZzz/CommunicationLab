@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starting point</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; 
+        }
+        .background-container {
+            background-image: url('images/maxresdefault.jpg'); /* 请确保图片与html文件在同一目录下 */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center; 
+        }
+
+        .content-box {
+            margin-right: 10%;
+            padding: 40px;
+            text-align: left;
+            color: #333;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            color: #057530; 
+            /* transform: rotate(-3deg);  */
+            display: inline-block;
+            margin-top: 80px;
+            margin-left: 50px;
+        }
+
+        .leaf{
+            display: block;
+            width: 200px;
+            height: 200px;
+
+            background-image: url('images/leafbtn.webp');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: transparent;
+
+            margin-top: -130px;
+            margin-left: auto;
+        }
+
+        .next-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-container">
+        <div class="content-box">
+            <h1>Loop of Sysiphus</h1>
+            <p>the loop begins...</p>
+            <a href="scene1.html" class="leaf"></a>
+        </div>
+    </div>
+
+</body>
+</html>

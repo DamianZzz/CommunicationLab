@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  color: #111;
+  background: #e7dcc5;
+}
+
+.scrollSpace {
+  height: 2000vh;
+}
+
+.viewport {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #e7dcc5;
+}
+
+.bgTransition{
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+.bgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+transition: none;
+}
+#bg1 {
+  opacity: 1;
+}
+#bg2 {
+  opacity: 0;
+}
+
+.treeEffects {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.canopy {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  width: 520px;
+  height: 360px;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.45s ease;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(24px);
+}
+
+/* green */
+.canopyGreen {
+  opacity: 1;
+}
+
+.canopyGreen .g1 {
+  width: 300px;
+  height: 200px;
+  left: -160px;
+  top: 120px;
+  background: rgba(71, 147, 31, 0.72);
+}
+
+.canopyGreen .g2 {
+  width: 200px;
+  height: 300px;
+  left: 40px;
+  top: 40px;
+  background: rgba(43, 94, 4, 0.72);
+}
+
+.canopyGreen .g3 {
+  width: 380px;
+  height: 230px;
+  left: 180px;
+  top:-20px;
+  background: rgba(47, 143, 15, 0.597);
+}
+
+.canopyGreen .g4 {
+  width: 250px;
+  height: 300px;
+  left: 360px;
+  top: 160px;
+  background: rgba(91, 149, 59, 0.68);
+}
+
+.canopyGreen .g5 {
+  width: 200px;
+  height: 160px;
+  left: -80px;
+  top:260px;
+  background: rgba(71, 176, 26, 0.5);
+}
+
+.canopyGreen .g6 {
+  width: 250px;
+  height: 180px;
+  left: 180px;
+  top: 170px;
+  background: rgba(8, 59, 1, 0.48);
+}
+
+.canopyGreen .g7 {
+  width: 200px;
+  height:290px;
+  left: 460px;
+  top: 40px;
+  background: rgba(71, 147, 31, 0.72);
+}
+
+/* yellow */
+.canopyGold {
+  opacity: 0;
+}
+
+.canopyGold .y1 {
+  width: 300px;
+  height: 200px;
+  left: -160px;
+  top: 120px;
+  background: rgba(184, 132, 58, 0.72);
+}
+
+.canopyGold .y2 {
+  width: 200px;
+  height: 300px;
+  left: 40px;
+  top: 40px;
+  background: rgba(216, 170, 78, 0.75);
+}
+
+.canopyGold .y3 {
+  width: 380px;
+  height: 230px;
+  left: 180px;
+  top:-20px;
+  background: rgba(126, 82, 40, 0.62);
+}
+.canopyGold .y4 {
+  width: 250px;
+  height: 300px;
+  left: 360px;
+  top: 160px;
+  background: rgba(184, 132, 58, 0.72);
+}
+
+.canopyGold .y5 {
+  width: 200px;
+  height: 160px;
+  left: -80px;
+  top:260px;
+  background: rgba(216, 170, 78, 0.75);
+}
+
+.canopyGGold .y6 {
+  width: 250px;
+  height: 180px;
+  left: 180px;
+  top: 170px;
+  background: rgba(126, 82, 40, 0.62);
+}
+
+.canopyGold .y7 {
+  width: 200px;
+  height:290px;
+  left: 460px;
+  top: 40px;
+  background: rgba(184, 132, 58, 0.72);
+}
+
+.highlightLeaf {
+  position: absolute;
+  left: 57%;
+  top: 28%;
+  width: 45px;
+  height: auto;
+  transform: rotate(-25deg);
+  transform-origin: center center;
+  transition:
+    left 0.5s ease,
+    top 0.5s ease,
+    transform 0.5s ease,
+    opacity 0.4s ease;
+  z-index: 5;
+}
+
+.newLeaf {
+  position: absolute;
+  left: 56.7%;
+  top: 28.5%;
+  width: 52px;
+  height: auto;
+  opacity: 0;
+  transform: rotate(-25deg) scale(0.2);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  z-index: 6;
+}
+
+.snowLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  pointer-events: none;
+}
+
+.snowflake {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  filter: blur(1px);
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-20px);
+    opacity: 0.9;
+  }
+  to {
+    transform: translateY(110vh);
+    opacity: 0.2;
+  }
+}
+
+.snowGround {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to top, rgba(255,255,255,0.92), rgba(255,255,255,0.62));
+  transition: height 0.35s ease;
+  z-index: 8;
+}
+
+.text {
+  position: absolute;
+  left: 40px;
+  top: 34px;
+  z-index: 10;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.text p {
+  margin: 10px 0;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.nextLink {
+  display: none;
+  position: absolute;
+  right: 44px;
+  bottom: 38px;
+  z-index: 10;
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: 2px solid #111;
+  padding: 16px 20px;
+  background: rgba(236, 211, 145, 0.9);
+}
+
+.nextLink.show {
+  display: block;
+}
+
+.nextLink:hover {
+  background: #111;
+  color: #f0d58a;
+}
