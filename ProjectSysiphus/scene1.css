@@ -44,7 +44,6 @@ body.dragging {
   top: 45px;
 }
 
-/* moving path */
 .trackWorld {
   position: absolute;
   inset: 0;
@@ -83,7 +82,6 @@ body.dragging {
   color: #111;
 }
 
-/* fixed foreground */
 .stage {
   position: absolute;
   inset: 0;
@@ -133,7 +131,7 @@ body.dragging .figureImg {
   transform: rotate(-4deg) translateX(8px);
 }
 
-/* UI */
+
 .text {
   position: absolute;
   left: 40px;

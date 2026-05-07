@@ -4,7 +4,7 @@ let instruction = document.querySelector("#instruc");
 let nextLink = document.querySelector("#nextLink");
 
 let population = 0;
-let maxPopulation = 40;
+let maxPopulation = 25;
 
 let colorClasses = ["green", "darkGreen", "lightGreen"];
 

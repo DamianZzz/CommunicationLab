@@ -18,14 +18,14 @@ let endDistance = 4000;
 let loopLength = 1400;
 
 
-
+let loopLengthFar = 10000;
 function moveWorld() {
   let progress = distance % loopLength;
-
+  let progressF = distance % loopLengthFar;
   let trackX = -progress;
   let trackY = progress * 0.36;
 
-  let farX = -progress * 0.18;
+  let farX = -progressF * 0.18;
 
   trackWorld.style.transform =
     "translate(" + trackX + "px, " + trackY + "px)";
