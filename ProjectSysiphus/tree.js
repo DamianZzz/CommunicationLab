@@ -13,7 +13,7 @@ let snowTimer = null;
 
 function clamp(value, min, max) {
     return Math.max(min, Math.min(max, value));
-}
+}//ai suggested
 
 function mapRange(value, inMin, inMax, outMin, outMax) {
     let percentage = (value - inMin) / (inMax - inMin);
@@ -32,7 +32,7 @@ function createSnowflake() {
     let snowflake = document.createElement("div");
     snowflake.className = "snowflake";
 
-    let size = Math.random() * 7 + 4;
+    let size = Math.random() * 7 + 5;
     snowflake.style.width = size + "px";
     snowflake.style.height = size + "px";
     snowflake.style.left = Math.random() * window.innerWidth + "px";
@@ -86,7 +86,7 @@ function updateScene() {
   else if (p < 0.48) {
     stopSnow();
 
-    let autumnProgress = mapRange(p, 0.25, 0.5, 0, 1);
+    let autumnProgress = mapRange(p, 0.18, 0.48, 0, 1);
     seasonText.innerText = "autumn: the tree changes color.";
 
     canopyGreen.style.opacity = 1 - autumnProgress * 0.75;
@@ -106,7 +106,7 @@ function updateScene() {
   else if (p < 0.75) {
     startSnow();
 
-    let winterProgress = mapRange(p, 0.50, 0.78, 0, 1);
+    let winterProgress = mapRange(p, 0.48, 0.75, 0, 1);
     seasonText.innerText = "winter: everything returns to quiet.";
 
     canopyGreen.style.opacity = 0.08;
@@ -132,7 +132,7 @@ function updateScene() {
   else {
     stopSnow();
 
-    let springProgress = mapRange(p, 0.78, 1, 0, 1);
+    let springProgress = mapRange(p, 0.75, 1, 0, 1);
     seasonText.innerText = "spring: the tree begins again.";
 
     canopyGreen.style.opacity = mapRange(springProgress, 0, 1, 0.08, 1);

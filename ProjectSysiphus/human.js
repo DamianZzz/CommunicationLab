@@ -61,7 +61,7 @@ function createLeafPopup() {
 
         if (leavesLeft === 0) {
             finalLink.classList.add("show");
-            statusText.innerText = "ready: return to the myth";
+            statusText.innerText = "ready: return to the";
         }
     };
 

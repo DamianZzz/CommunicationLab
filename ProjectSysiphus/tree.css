@@ -13,7 +13,7 @@ body {
   position: fixed;
   inset: 0;
   overflow: hidden;
-  background: #e7dcc5;
+  /* background: #e7dcc5; */
 }
 
 .bgTransition{
@@ -22,11 +22,11 @@ body {
     z-index: 1;
 }
 .bgImage {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 transition: none;
 }
 #bg1 {
@@ -64,7 +64,7 @@ transition: none;
   opacity: 1;
 }
 
-.canopyGreen .g1 {
+.blob.g1 {
   width: 300px;
   height: 200px;
   left: -160px;
@@ -72,7 +72,7 @@ transition: none;
   background: rgba(71, 147, 31, 0.72);
 }
 
-.canopyGreen .g2 {
+.blob.g2 {
   width: 200px;
   height: 300px;
   left: 40px;
@@ -80,7 +80,7 @@ transition: none;
   background: rgba(43, 94, 4, 0.72);
 }
 
-.canopyGreen .g3 {
+.blob.g3 {
   width: 380px;
   height: 230px;
   left: 180px;
@@ -88,7 +88,7 @@ transition: none;
   background: rgba(47, 143, 15, 0.597);
 }
 
-.canopyGreen .g4 {
+.blob.g4 {
   width: 250px;
   height: 300px;
   left: 360px;
@@ -96,7 +96,7 @@ transition: none;
   background: rgba(91, 149, 59, 0.68);
 }
 
-.canopyGreen .g5 {
+.blob.g5 {
   width: 200px;
   height: 160px;
   left: -80px;
@@ -104,7 +104,7 @@ transition: none;
   background: rgba(71, 176, 26, 0.5);
 }
 
-.canopyGreen .g6 {
+.blob.g6 {
   width: 250px;
   height: 180px;
   left: 180px;
@@ -112,7 +112,7 @@ transition: none;
   background: rgba(8, 59, 1, 0.48);
 }
 
-.canopyGreen .g7 {
+.blob.g7 {
   width: 200px;
   height:290px;
   left: 460px;
@@ -125,7 +125,7 @@ transition: none;
   opacity: 0;
 }
 
-.canopyGold .y1 {
+.blob.y1 {
   width: 300px;
   height: 200px;
   left: -160px;
@@ -133,7 +133,7 @@ transition: none;
   background: rgba(184, 132, 58, 0.72);
 }
 
-.canopyGold .y2 {
+.blob.y2 {
   width: 200px;
   height: 300px;
   left: 40px;
@@ -141,14 +141,14 @@ transition: none;
   background: rgba(216, 170, 78, 0.75);
 }
 
-.canopyGold .y3 {
+.blob.y3 {
   width: 380px;
   height: 230px;
   left: 180px;
   top:-20px;
   background: rgba(126, 82, 40, 0.62);
 }
-.canopyGold .y4 {
+.blob.y4 {
   width: 250px;
   height: 300px;
   left: 360px;
@@ -156,7 +156,7 @@ transition: none;
   background: rgba(184, 132, 58, 0.72);
 }
 
-.canopyGold .y5 {
+.blob.y5 {
   width: 200px;
   height: 160px;
   left: -80px;
@@ -164,7 +164,7 @@ transition: none;
   background: rgba(216, 170, 78, 0.75);
 }
 
-.canopyGGold .y6 {
+.blob.y6 {
   width: 250px;
   height: 180px;
   left: 180px;
@@ -172,7 +172,7 @@ transition: none;
   background: rgba(126, 82, 40, 0.62);
 }
 
-.canopyGold .y7 {
+.blob.y7 {
   width: 200px;
   height:290px;
   left: 460px;
@@ -198,9 +198,9 @@ transition: none;
 
 .newLeaf {
   position: absolute;
-  left: 56.7%;
-  top: 28.5%;
-  width: 52px;
+  left: 57%;
+  top: 28%;
+  width: 45px;
   height: auto;
   opacity: 0;
   transform: rotate(-25deg) scale(0.2);
