@@ -20,12 +20,14 @@ let loopLength = 1400;
 
 let loopLengthFar = 10000;
 function moveWorld() {
+  let scale = window.innerWidth / 1536;
+
   let progress = distance % loopLength;
   let progressF = distance % loopLengthFar;
-  let trackX = -progress;
-  let trackY = progress * 0.36;
+let trackX = -progress * scale;
+  let trackY = (progress * 0.36) * scale; 
 
-  let farX = -progressF * 0.18;
+  let farX = (-progressF * 0.18) * scale;
 
   trackWorld.style.transform =
     "translate(" + trackX + "px, " + trackY + "px)";
@@ -52,30 +54,24 @@ document.addEventListener("mousedown", function(event) {
 });
 
 document.addEventListener("mousemove", function(event) {
-  if (dragging == false) {
-    return;
-  }
+  if (!dragging) return;
 
   let dx = event.clientX - lastX;
   let dy = event.clientY - lastY;
 
-  let movement = dx - dy;
+  let moveInput = (dx - dy);
+  
+  let sensitivity = 1536 / window.innerWidth; 
+  let movement = moveInput * sensitivity;
 
   if (movement < 0) {
     movement = movement * -0.25;
   }
 
   distance = distance + movement;
-
-  if (distance < 0) {
-    distance = 0;
-  }
+  if (distance < 0) distance = 0;
 
   moveWorld();
-
-  // if (Math.floor(distance) % 260 < 14) {
-  //   addFloatingWord();
-  // }
 
   lastX = event.clientX;
   lastY = event.clientY;
@@ -87,17 +83,11 @@ document.addEventListener("mouseup", function() {
 });
 
 document.addEventListener("wheel", function(event) {
-  distance = distance + event.deltaY * 0.5;
+  let sensitivity = 1536 / window.innerWidth;
+  distance = distance + (event.deltaY * 0.5 * sensitivity);
 
-  if (distance < 0) {
-    distance = 0;
-  }
-
+  if (distance < 0) distance = 0;
   moveWorld();
-
-  if (Math.floor(distance) % 260 < 14) {
-    addFloatingWord();
-  }
 });
 
 
